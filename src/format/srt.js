@@ -1,5 +1,5 @@
 import { fromSrt, toSrt } from "subtitles-parser";
-import Dialogue from "../managers/Dialogue";
+import Dialogue from "../managers/Dialogue.js";
 
 export function parse (str) {
   let dialogues = fromSrt(str, true);

@@ -1,3 +1,11 @@
+/**
+ * It takes an array of objects and returns an array of objects with the same properties, but with the
+ * added property of a `say` method
+ * @param array - The array of objects to be converted to Dialogue objects.
+ * @returns An array of Dialogue objects.
+ */
+export function from (array: DialogueOptions[]): Dialogue[];
+
 export class Dialogue {
   public text: string;
   public start: Time;
@@ -21,6 +29,34 @@ export class Dialogue {
    * @returns A new instance of the Dialogue class.
    */
   createEmpty (): Dialogue;
+
+  /**
+   * The function takes a string as an argument and sets the text property of the object to the string.
+   * @param text - The text to be displayed.
+   * @returns The object itself.
+   */
+   setText (text: string): Dialogue;
+
+  /**
+   * This function sets the secondary text of the card.
+   * @param text - The text to display in the notification.
+   * @returns The object itself.
+   */
+  setSecondaryText (text: string): Dialogue;
+
+  /**
+   * This function sets the start time of the event to the time passed in as a parameter.
+   * @param time - The time to set the start time to.
+   * @returns The object itself.
+   */
+  setStartTime (time: string | Time): Dialogue;
+
+  /**
+   * This function sets the end time of the event.
+   * @param time - The time to set the end time to.
+   * @returns The object itself.
+   */
+  setEndTime (time: string | Time): Dialogue;
 
   /**
    * It creates a new Dialogue object with the same properties as the original.

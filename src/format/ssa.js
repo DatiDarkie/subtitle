@@ -1,5 +1,5 @@
 import { parse as fromSsa, convert as toSsa } from "subtitles-ssa";
-import Dialogue from "../managers/Dialogue";
+import Dialogue from "../managers/Dialogue.js";
 
 export function parse (str) {
   let dialogues = fromSsa(str);

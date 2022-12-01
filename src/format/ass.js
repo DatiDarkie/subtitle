@@ -1,4 +1,4 @@
-import Dialogue from "../managers/Dialogue";
+import Dialogue from "../managers/Dialogue.js";
 
 export function parse (str) {
   let lines = str.split("\n");
